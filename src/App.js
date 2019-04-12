@@ -9,9 +9,13 @@ function App() {
   const [url, setUrl] = useState(
     "https://api.coingecko.com/api/v3/coins/eos/market_chart?vs_currency=usd&days=max"
   );
+  const [isLoading, setIsLoading] = useState(false);
+  const [stocks, setStocks] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
+      setIsLoading(true);
+
       const result = await axios(url);
       setData([
         ...data,
@@ -20,39 +24,51 @@ function App() {
           data: result.data.market_caps
         }
       ]);
+      setIsLoading(false);
+      setStocks([...stocks, query]);
     };
     fetchData();
   }, [url]);
 
-  const options = {
-    title: {
-      text: "market cap"
-    },
-    tooltip: {
-      valueDecimals: 0
-    },
-    series: [...data]
+  const doFetch = () => {
+    setUrl(
+      `https://api.coingecko.com/api/v3/coins/${query}/market_chart?vs_currency=usd&days=max`
+    );
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        value={query}
-        onChange={event => setQuery(event.target.value)}
-      />
-      <button
-        type="button"
-        onClick={() =>
-          setUrl(
-            `https://api.coingecko.com/api/v3/coins/${query}/market_chart?vs_currency=usd&days=max`
-          )
-        }
-      >
-        Search
-      </button>
+    <div className="app-container">
+      <form
+        onSubmit={event => {
+          doFetch();
 
-      <Chart options={options} />
+          event.preventDefault();
+        }}
+      >
+        <input
+          type="text"
+          value={query}
+          onChange={event => setQuery(event.target.value)}
+        />
+        <button
+          type="button"
+          onClick={() =>
+            setUrl(
+              `https://api.coingecko.com/api/v3/coins/${query}/market_chart?vs_currency=usd&days=max`
+            )
+          }
+        >
+          Search
+        </button>
+      </form>
+      <div className="stocks">
+        {stocks.map(stock => (
+          <div>
+            <h1>{stock}</h1>
+          </div>
+        ))}
+      </div>
+      {isLoading ? <div>Loading ...</div> : <Chart series={data} />}
     </div>
   );
 }
