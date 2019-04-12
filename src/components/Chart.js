@@ -1,32 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Highcharts from "highcharts/highstock";
-import HighchartsReact from "highcharts-react-official";
 
 export default function Chart(props) {
-  const { series } = props;
+  function createChart() {
+    const { series } = props;
 
-  const options = {
-    title: {
-      text: "market cap"
-    },
-    yAxis: {
+    const config = {
       title: {
         text: "market cap"
+      },
+      yAxis: {
+        title: {
+          text: "market cap"
+        }
+      },
+      tooltip: {
+        valueDecimals: 0
       }
-    },
-    tooltip: {
-      valueDecimals: 0
-    },
-    series: [...series]
-  };
+    };
+
+    Highcharts.stockChart("Graph", {
+      ...config,
+      series: [...series]
+    });
+  }
+
+  useEffect(() => {
+    createChart();
+    return createChart();
+  }, []);
 
   return (
     <>
-      <HighchartsReact
-        highcharts={Highcharts}
-        constructorType="stockChart"
-        options={options}
-      />
+      <div id="Graph" />
     </>
   );
 }
