@@ -2,9 +2,8 @@ import React, { useEffect } from "react";
 import Highcharts from "highcharts/highstock";
 
 export default function Chart(props) {
+  const { series, update } = props;
   function createChart() {
-    const { series } = props;
-
     const config = {
       title: {
         text: "market cap"
@@ -28,7 +27,7 @@ export default function Chart(props) {
   useEffect(() => {
     createChart();
     return createChart();
-  }, []);
+  }, [update]);
 
   return (
     <>
