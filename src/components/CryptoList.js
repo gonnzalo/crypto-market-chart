@@ -31,5 +31,6 @@ export default function CryptoList(props) {
 
 CryptoList.propTypes = {
   cryptos: PropTypes.arrayOf(PropTypes.string).isRequired,
-  toggleCrypto: PropTypes.func.isRequired
+  toggleCrypto: PropTypes.func.isRequired,
+  removeCrypto: PropTypes.func.isRequired
 };
