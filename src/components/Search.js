@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function Search(props) {
   const { query, handleSubmit, handleChange } = props;
@@ -12,3 +13,9 @@ export default function Search(props) {
     </>
   );
 }
+
+Search.propTypes = {
+  query: PropTypes.string.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired
+};

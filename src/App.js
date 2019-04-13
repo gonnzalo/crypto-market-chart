@@ -5,12 +5,37 @@ import Chart from "./components/Chart";
 import CryptoList from "./components/CryptoList";
 import "./App.css";
 
-const useCoinGeckoApi = (initialUrl, initialData, symbol) => {
-  const [data, setData] = useState(initialData);
-  const [url, setUrl] = useState(initialUrl);
+const useCoinGeckoApi = symbol => {
+  const [data, setData] = useState([]);
+  const [url, setUrl] = useState();
   const [isLoading, setIsLoading] = useState(false);
-  const [cryptocurrencies, setcryptocurrencies] = useState([]);
+  const [cryptocurrencies, setCryptocurrencies] = useState([
+    "eos",
+    "litecoin",
+    "stellar",
+    "cardano",
+    "tron"
+  ]);
   const [updateChart, setUpdateChart] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+    const promises = cryptocurrencies.map(async value => {
+      const response = await axios({
+        url: `https://api.coingecko.com/api/v3/coins/${value}/market_chart?vs_currency=usd&days=max`
+      });
+      return {
+        name: value,
+        data: response.data.market_caps,
+        display: true
+      };
+    });
+
+    Promise.all(promises).then(result => {
+      setData(...data, result);
+      setIsLoading(false);
+    });
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,7 +52,7 @@ const useCoinGeckoApi = (initialUrl, initialData, symbol) => {
           }
         ]);
         setIsLoading(false);
-        setcryptocurrencies([...cryptocurrencies, symbol]);
+        setCryptocurrencies([...cryptocurrencies, symbol]);
       }
     };
     fetchData();
@@ -48,13 +73,21 @@ const useCoinGeckoApi = (initialUrl, initialData, symbol) => {
     setUpdateChart(!updateChart);
   }
 
+  function removeCrypto(e) {
+    const { value } = e.target;
+    setCryptocurrencies(cryptocurrencies.filter(v => v !== value));
+    setData(data.filter(v => v.name !== value));
+    setUpdateChart(!updateChart);
+  }
+
   return {
     data,
     isLoading,
     doFetch,
     cryptocurrencies,
     toggleCrypto,
-    updateChart
+    updateChart,
+    removeCrypto
   };
 };
 
@@ -66,12 +99,9 @@ function App() {
     cryptocurrencies,
     doFetch,
     toggleCrypto,
-    updateChart
-  } = useCoinGeckoApi(
-    "https://api.coingecko.com/api/v3/coins/eos/market_chart?vs_currency=usd&days=max",
-    [],
-    query
-  );
+    updateChart,
+    removeCrypto
+  } = useCoinGeckoApi(query);
 
   function handleChange(event) {
     setQuery(event.target.value);
@@ -93,7 +123,11 @@ function App() {
         handleSubmit={handleSubmit}
       />
       <div className="cryptocurrencies">
-        <CryptoList cryptos={cryptocurrencies} toggleCrypto={toggleCrypto} />
+        <CryptoList
+          cryptos={cryptocurrencies}
+          toggleCrypto={toggleCrypto}
+          removeCrypto={removeCrypto}
+        />
       </div>
       {isLoading ? (
         <div>Loading ...</div>
