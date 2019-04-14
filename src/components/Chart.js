@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import Highcharts from "highcharts/highstock";
+import "./chart.css";
 
 export default function Chart(props) {
   const { series, update } = props;
-
   function createChart() {
     const config = {
       colors: [
@@ -20,6 +20,30 @@ export default function Chart(props) {
         "#F0F465"
       ],
       rangeSelector: {
+        buttonTheme: {
+          // styles for the buttons
+          fill: "none",
+          stroke: "none",
+          "stroke-width": 0,
+          r: 2,
+          style: {
+            color: "#ccc",
+            fontWeight: "bold"
+          },
+          states: {
+            hover: {
+              fill: "#244456"
+            },
+            select: {
+              fill: "#315d77",
+              style: {
+                color: "white"
+              }
+            }
+            // disabled: { ... }
+          }
+        },
+
         selected: 4
       },
       chart: {
@@ -64,12 +88,15 @@ export default function Chart(props) {
           color: "#666666"
         }
       },
+      credits: {
+        enabled: false
+      },
       xAxis: {
         gridLineColor: "#2E3740",
         gridLineWidth: 1,
         labels: {
           style: {
-            color: "#525252"
+            color: "#ccc"
           }
         },
         lineColor: "#2E3740",
@@ -86,7 +113,7 @@ export default function Chart(props) {
         gridLineWidth: 1,
         labels: {
           style: {
-            color: "#525252"
+            color: "#ccc"
           },
           lineColor: "#2E3740",
           tickColor: "#2E3740",
@@ -112,7 +139,9 @@ export default function Chart(props) {
 
   return (
     <>
-      <div id="Graph" />
+      <div className="graph-container">
+        <div id="Graph" />
+      </div>
     </>
   );
 }

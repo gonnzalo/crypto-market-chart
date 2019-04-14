@@ -1,0 +1,10 @@
+.app-container {
+  height: 100vh;
+  background-color: #242f39;
+}
+
+.app-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 1rem;
+}

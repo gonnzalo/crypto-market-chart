@@ -1,30 +1,35 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./cryptoList.css";
 
 export default function CryptoList(props) {
   const { removeCrypto, cryptos, toggleCrypto } = props;
   return (
     <>
-      {cryptos.map(crypto => (
-        <>
-          <button
-            type="button"
-            key={crypto}
-            value={crypto}
-            onClick={toggleCrypto}
-          >
-            {crypto}
-          </button>
-          <button
+      <div className="crypto-container">
+        {cryptos.map(crypto => (
+          <>
+            <button
+              type="button"
+              key={crypto}
+              value={crypto}
+              onClick={toggleCrypto}
+              className="btn btn-symbol"
+            >
+              {crypto}
+            </button>
+            {/* <button
             key={`${crypto}-remove`}
             value={crypto}
             type="button"
             onClick={removeCrypto}
+            className="btn-remove"
           >
             X
-          </button>
-        </>
-      ))}
+          </button> */}
+          </>
+        ))}
+      </div>
     </>
   );
 }

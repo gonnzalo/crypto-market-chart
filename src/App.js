@@ -112,31 +112,35 @@ function App() {
       `https://api.coingecko.com/api/v3/coins/${query}/market_chart?vs_currency=usd&days=max`
     );
 
+    event.target.reset();
+
     event.preventDefault();
   }
 
   return (
     <div className="app-container">
-      <Search
-        query={query}
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-      />
-      <div className="cryptocurrencies">
-        <CryptoList
-          cryptos={cryptocurrencies}
-          toggleCrypto={toggleCrypto}
-          removeCrypto={removeCrypto}
+      <div className="app-wrapper">
+        <Search
+          query={query}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
         />
+        <div className="cryptocurrencies">
+          <CryptoList
+            cryptos={cryptocurrencies}
+            toggleCrypto={toggleCrypto}
+            removeCrypto={removeCrypto}
+          />
+        </div>
+        {isLoading ? (
+          <div>Loading ...</div>
+        ) : (
+          <Chart
+            series={data.filter(crypto => crypto.display)}
+            update={updateChart}
+          />
+        )}
       </div>
-      {isLoading ? (
-        <div>Loading ...</div>
-      ) : (
-        <Chart
-          series={data.filter(crypto => crypto.display)}
-          update={updateChart}
-        />
-      )}
     </div>
   );
 }
