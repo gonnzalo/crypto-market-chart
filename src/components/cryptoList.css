@@ -1,14 +1,46 @@
 .crypto-container {
   display: flex;
-  justify-content: center;
+  align-items: stretch;
 }
 
 .btn {
+  flex: 1 1 0;
   font-size: 1rem;
   padding: 0.5rem;
   background-color: transparent;
   color: #eee;
-  border-radius: 3px;
-  border: 1px solid #eee;
+  border-radius: 1px;
+  border: 1px solid rgb(129, 129, 129);
+  border-right: none;
+  margin: 1rem 0rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: 500;
+  outline: none;
+}
+
+.active {
+  background-color: #242f39;
+  color: rgb(54, 54, 54);
+}
+
+.remove-container {
+  position: relative;
+}
+
+.btn-remove {
   margin: 1rem 0.5rem 1rem 0;
+  border: none;
+  border-left: none;
+  background-color: rgb(17, 17, 17);
+  color: rgb(180, 180, 180);
+  font-size: 1rem;
+  border-radius: 1px;
+  font-weight: 500;
+  padding: 0.1rem 1rem;
+}
+
+.active-remove {
+  border: 1px solid rgb(129, 129, 129);
+  background-color: rgb(27, 27, 27);
 }

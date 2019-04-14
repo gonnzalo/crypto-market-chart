@@ -8,7 +8,7 @@ import "./App.css";
 const useCoinGeckoApi = symbol => {
   const [data, setData] = useState([]);
   const [url, setUrl] = useState();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [cryptocurrencies, setCryptocurrencies] = useState([
     "eos",
     "litecoin",
@@ -19,7 +19,6 @@ const useCoinGeckoApi = symbol => {
   const [updateChart, setUpdateChart] = useState(false);
 
   useEffect(() => {
-    setIsLoading(true);
     const promises = cryptocurrencies.map(async value => {
       const response = await axios({
         url: `https://api.coingecko.com/api/v3/coins/${value}/market_chart?vs_currency=usd&days=max`
@@ -64,9 +63,9 @@ const useCoinGeckoApi = symbol => {
 
   function toggleCrypto(e) {
     setData(
-      data.filter(crypto => {
-        const backup = crypto;
-        if (e.target.value === crypto.name) backup.display = !crypto.display;
+      data.filter(cryptos => {
+        const backup = cryptos;
+        if (e.target.value === cryptos.name) backup.display = !cryptos.display;
         return backup;
       })
     );
@@ -125,20 +124,24 @@ function App() {
           handleChange={handleChange}
           handleSubmit={handleSubmit}
         />
-        <div className="cryptocurrencies">
-          <CryptoList
-            cryptos={cryptocurrencies}
-            toggleCrypto={toggleCrypto}
-            removeCrypto={removeCrypto}
-          />
-        </div>
+
         {isLoading ? (
           <div>Loading ...</div>
         ) : (
-          <Chart
-            series={data.filter(crypto => crypto.display)}
-            update={updateChart}
-          />
+          <>
+            <div className="cryptocurrencies">
+              <CryptoList
+                cryptos={cryptocurrencies}
+                toggleCrypto={toggleCrypto}
+                removeCrypto={removeCrypto}
+                data={data}
+              />
+            </div>
+            <Chart
+              series={data.filter(crypto => crypto.display)}
+              update={updateChart}
+            />
+          </>
         )}
       </div>
     </div>

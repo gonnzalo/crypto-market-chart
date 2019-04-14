@@ -3,35 +3,44 @@ import PropTypes from "prop-types";
 import "./cryptoList.css";
 
 export default function CryptoList(props) {
-  const { removeCrypto, cryptos, toggleCrypto } = props;
-  return (
-    <>
-      <div className="crypto-container">
-        {cryptos.map(crypto => (
-          <>
-            <button
-              type="button"
-              key={crypto}
-              value={crypto}
-              onClick={toggleCrypto}
-              className="btn btn-symbol"
-            >
-              {crypto}
-            </button>
-            {/* <button
-            key={`${crypto}-remove`}
-            value={crypto}
-            type="button"
-            onClick={removeCrypto}
-            className="btn-remove"
-          >
-            X
-          </button> */}
-          </>
-        ))}
-      </div>
-    </>
-  );
+  const { removeCrypto, cryptos, toggleCrypto, data } = props;
+
+  console.log(data[1].display);
+
+  if (crypto !== undefined) {
+    return (
+      <>
+        <div className="crypto-container">
+          {cryptos.map((crypto, i) => (
+            <>
+              <button
+                type="button"
+                key={crypto}
+                value={crypto}
+                onClick={toggleCrypto}
+                className={`btn btn-symbol ${
+                  data[i].display === true ? "active " : ""
+                }`}
+              >
+                {crypto}
+              </button>
+              <button
+                key={`${crypto}-remove`}
+                value={crypto}
+                type="button"
+                onClick={removeCrypto}
+                className={`btn-remove ${
+                  data[i].display === true ? " " : "active-remove"
+                }`}
+              >
+                X
+              </button>
+            </>
+          ))}
+        </div>
+      </>
+    );
+  }
 }
 
 CryptoList.propTypes = {
