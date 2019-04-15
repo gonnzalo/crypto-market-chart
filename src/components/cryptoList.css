@@ -1,27 +1,41 @@
 .crypto-container {
   display: flex;
-  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.btns-container {
+  flex: 1 1 0;
+  display: flex;
 }
 
 .btn {
   flex: 1 1 0;
   font-size: 1rem;
   padding: 0.5rem;
-  background-color: transparent;
-  color: #eee;
+  background-color: #18643e;
+  color: rgb(187, 187, 187);
   border-radius: 1px;
-  border: 1px solid rgb(129, 129, 129);
+  border: none;
   border-right: none;
   margin: 1rem 0rem;
   text-transform: capitalize;
   letter-spacing: 1px;
   font-weight: 500;
   outline: none;
+  opacity: 0.4;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 1;
 }
 
 .active {
-  background-color: #242f39;
-  color: rgb(54, 54, 54);
+  opacity: 1;
+}
+
+.active:hover {
+  transform: translateY(-2px);
 }
 
 .remove-container {
@@ -38,9 +52,19 @@
   border-radius: 1px;
   font-weight: 500;
   padding: 0.1rem 1rem;
+  opacity: 0.4;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-remove:hover {
+  opacity: 1;
+  background-color: rgb(175, 57, 57);
 }
 
 .active-remove {
-  border: 1px solid rgb(129, 129, 129);
-  background-color: rgb(27, 27, 27);
+  opacity: 1;
+}
+
+.active-remove:hover {
+  background-color: rgb(175, 57, 57);
 }

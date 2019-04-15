@@ -5,14 +5,12 @@ import "./cryptoList.css";
 export default function CryptoList(props) {
   const { removeCrypto, cryptos, toggleCrypto, data } = props;
 
-  console.log(data[1].display);
-
   if (crypto !== undefined) {
     return (
       <>
         <div className="crypto-container">
           {cryptos.map((crypto, i) => (
-            <>
+            <div className="btns-container">
               <button
                 type="button"
                 key={crypto}
@@ -30,12 +28,12 @@ export default function CryptoList(props) {
                 type="button"
                 onClick={removeCrypto}
                 className={`btn-remove ${
-                  data[i].display === true ? " " : "active-remove"
+                  data[i].display === true ? "active-remove " : ""
                 }`}
               >
                 X
               </button>
-            </>
+            </div>
           ))}
         </div>
       </>

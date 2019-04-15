@@ -3,6 +3,8 @@ import axios from "axios";
 import Search from "./components/Search";
 import Chart from "./components/Chart";
 import CryptoList from "./components/CryptoList";
+import LoadingProgress from "./components/LoadingProgress";
+import AutoComplete from "./components/AutoComplete";
 import "./App.css";
 
 const useCoinGeckoApi = symbol => {
@@ -10,23 +12,28 @@ const useCoinGeckoApi = symbol => {
   const [url, setUrl] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [cryptocurrencies, setCryptocurrencies] = useState([
+    "bitcoin",
+    "ethereum",
+    "ripple",
     "eos",
     "litecoin",
     "stellar",
     "cardano",
-    "tron"
+    "tron",
+    "monero",
+    "dash"
   ]);
   const [updateChart, setUpdateChart] = useState(false);
 
   useEffect(() => {
-    const promises = cryptocurrencies.map(async value => {
+    const promises = cryptocurrencies.map(async (value, i) => {
       const response = await axios({
         url: `https://api.coingecko.com/api/v3/coins/${value}/market_chart?vs_currency=usd&days=max`
       });
       return {
         name: value,
         data: response.data.market_caps,
-        display: true
+        display: i > 2
       };
     });
 
@@ -102,11 +109,12 @@ function App() {
     removeCrypto
   } = useCoinGeckoApi(query);
 
-  function handleChange(event) {
-    setQuery(event.target.value);
+  function handleChange(value) {
+    setQuery(value);
   }
 
   function handleSubmit(event) {
+    console.log(query);
     doFetch(
       `https://api.coingecko.com/api/v3/coins/${query}/market_chart?vs_currency=usd&days=max`
     );
@@ -119,16 +127,24 @@ function App() {
   return (
     <div className="app-container">
       <div className="app-wrapper">
-        <Search
+        {/* <Search
+          query={query}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+        /> */}
+        <AutoComplete
           query={query}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
         />
-
         {isLoading ? (
-          <div>Loading ...</div>
+          <LoadingProgress className="loading-progress" />
         ) : (
           <>
+            <Chart
+              series={data.filter(crypto => crypto.display)}
+              update={updateChart}
+            />
             <div className="cryptocurrencies">
               <CryptoList
                 cryptos={cryptocurrencies}
@@ -137,10 +153,6 @@ function App() {
                 data={data}
               />
             </div>
-            <Chart
-              series={data.filter(crypto => crypto.display)}
-              update={updateChart}
-            />
           </>
         )}
       </div>
