@@ -31,14 +31,6 @@ class AutoComplete extends React.Component {
     };
   }
 
-  // componentDidMount() {
-  //   window.addEventListener("focus", this.handleFocus);
-  // }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener("focus", this.handleFocus);
-  // }
-
   onChange = (event, { newValue }) => {
     const { handleChange } = this.props;
     handleChange(newValue);
@@ -92,7 +84,6 @@ class AutoComplete extends React.Component {
 
     const { handleSubmit } = this.props;
 
-    // Finally, render it!
     return (
       <form
         onFocus={this.handleFocus}

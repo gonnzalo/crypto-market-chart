@@ -125,11 +125,6 @@ function App() {
   return (
     <div className="app-container">
       <div className="app-wrapper">
-        {/* <Search
-          query={query}
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-        /> */}
         <AutoComplete
           query={query}
           handleChange={handleChange}
