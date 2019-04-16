@@ -1,8 +1,10 @@
 import React from "react";
 import Autosuggest from "react-autosuggest";
-import cryptoList from "./cryptoList";
+import PropTypes from "prop-types";
 import "./autoComplete.css";
-import { formatMs } from "@material-ui/core/styles/transitions";
+import SearchIcon from "@material-ui/icons/Search";
+import ClearIcon from "@material-ui/icons/Clear";
+import symbolsList from "../utils/symbolsList";
 
 const getSuggestions = value => {
   const inputValue = value.trim().toLowerCase();
@@ -10,7 +12,7 @@ const getSuggestions = value => {
 
   return inputLength === 0
     ? []
-    : cryptoList.filter(
+    : symbolsList.filter(
         lang => lang.id.toLowerCase().slice(0, inputLength) === inputValue
       );
 };
@@ -19,17 +21,27 @@ const getSuggestionValue = suggestion => suggestion.id;
 
 const renderSuggestion = suggestion => <div>{suggestion.id}</div>;
 
-class Autocomplete extends React.Component {
+class AutoComplete extends React.Component {
   constructor() {
     super();
     this.state = {
       value: "",
-      suggestions: []
+      suggestions: [],
+      isFocus: false
     };
   }
 
+  // componentDidMount() {
+  //   window.addEventListener("focus", this.handleFocus);
+  // }
+
+  // componentWillUnmount() {
+  //   window.removeEventListener("focus", this.handleFocus);
+  // }
+
   onChange = (event, { newValue }) => {
-    this.props.handleChange(newValue);
+    const { handleChange } = this.props;
+    handleChange(newValue);
     this.setState({
       value: newValue
     });
@@ -50,8 +62,26 @@ class Autocomplete extends React.Component {
     });
   };
 
+  handleFocus = () => {
+    this.setState({
+      isFocus: true
+    });
+  };
+
+  handleBlur = () => {
+    this.setState({
+      isFocus: false
+    });
+  };
+
+  handleClear = () => {
+    this.setState({
+      value: ""
+    });
+  };
+
   render() {
-    const { value, suggestions } = this.state;
+    const { value, suggestions, isFocus } = this.state;
 
     // Autosuggest will pass through all these props to the input.
     const inputProps = {
@@ -60,12 +90,16 @@ class Autocomplete extends React.Component {
       onChange: this.onChange
     };
 
+    const { handleSubmit } = this.props;
+
     // Finally, render it!
     return (
       <form
+        onFocus={this.handleFocus}
+        onBlur={this.handleBlur}
         action=""
-        onSubmit={this.props.handleSubmit}
-        className="form-container"
+        onSubmit={handleSubmit}
+        className="form-container active-form"
       >
         <Autosuggest
           suggestions={suggestions}
@@ -75,9 +109,25 @@ class Autocomplete extends React.Component {
           renderSuggestion={renderSuggestion}
           inputProps={inputProps}
         />
+        <button
+          type="button"
+          onMouseDown={this.handleClear}
+          className="btn-clear"
+          style={{ display: isFocus ? "block" : "none" }}
+        >
+          <ClearIcon className="clear-icon" />
+        </button>
+        <button type="submit" className="btn-submit">
+          <SearchIcon className="search-icon" />
+        </button>
       </form>
     );
   }
 }
 
-export default Autocomplete;
+AutoComplete.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired
+};
+
+export default AutoComplete;

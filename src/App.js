@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Search from "./components/Search";
 import Chart from "./components/Chart";
 import CryptoList from "./components/CryptoList";
 import LoadingProgress from "./components/LoadingProgress";
@@ -114,7 +113,6 @@ function App() {
   }
 
   function handleSubmit(event) {
-    console.log(query);
     doFetch(
       `https://api.coingecko.com/api/v3/coins/${query}/market_chart?vs_currency=usd&days=max`
     );

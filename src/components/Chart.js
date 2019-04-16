@@ -109,9 +109,26 @@ export default function Chart(props) {
         // }
       },
       yAxis: {
+        title: {
+          style: {
+            color: "#FFFFFF"
+          },
+          text: "Market Cap"
+        },
         gridLineColor: "#2E3740",
         gridLineWidth: 1,
         labels: {
+          formatter() {
+            const { value } = this;
+            const suffixes = ["", "K", "M", "B", "T"];
+            const suffixNum = Math.floor(`${value}`.length / 3);
+            const shortValue = parseFloat(
+              (suffixNum !== 0 ? value / 1000 ** suffixNum : value).toPrecision(
+                2
+              )
+            );
+            return `$${shortValue}${suffixes[suffixNum]}`;
+          },
           style: {
             color: "#ccc"
           },

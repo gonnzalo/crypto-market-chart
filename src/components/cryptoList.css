@@ -10,16 +10,17 @@
 
 .btn {
   flex: 1 1 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding: 0.5rem;
-  background-color: #18643e;
-  color: rgb(187, 187, 187);
+  background-color: rgb(99, 219, 99);
+  color: rgb(7, 7, 7);
+  font-family: "Raleway", sans-serif;
   border-radius: 1px;
   border: none;
   border-right: none;
   margin: 1rem 0rem;
-  text-transform: capitalize;
-  letter-spacing: 1px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   font-weight: 500;
   outline: none;
   opacity: 0.4;
@@ -28,6 +29,8 @@
 
 .btn:hover {
   opacity: 1;
+  background-color: rgb(74, 216, 74);
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .active {
@@ -38,16 +41,13 @@
   transform: translateY(-2px);
 }
 
-.remove-container {
-  position: relative;
-}
-
 .btn-remove {
   margin: 1rem 0.5rem 1rem 0;
   border: none;
   border-left: none;
   background-color: rgb(17, 17, 17);
   color: rgb(180, 180, 180);
+  font-family: "Roboto", serif;
   font-size: 1rem;
   border-radius: 1px;
   font-weight: 500;

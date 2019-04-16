@@ -1,20 +1,33 @@
+.form-container {
+  position: relative;
+  width: 260px;
+  margin-bottom: 1rem;
+}
+
 .react-autosuggest__container {
   position: relative;
+  width: 260px;
 }
 
 .react-autosuggest__input {
-  width: 280px;
-  background-color: rgb(26, 39, 53);
-  padding: 1rem;
-  border: none;
+  width: 260px;
+  background-color: rgb(26, 37, 49);
+  padding: 0.7rem;
+  font-family: "Raleway", sans-serif;
   color: #aaa;
-  border-radius: 4px;
+  border: 1px solid transparent;
+  border-radius: 1px;
   font-size: 1.2rem;
   outline: none;
+  padding-left: 45px;
+  transition: 0.3s;
 }
 
 .react-autosuggest__input--focused {
   outline: none;
+  color: #aaa;
+  background-color: rgb(26, 33, 41);
+  border: 1px solid rgb(38, 172, 89);
 }
 
 .react-autosuggest__input--open {
@@ -29,14 +42,15 @@
 .react-autosuggest__suggestions-container--open {
   display: block;
   position: absolute;
-  top: 51px;
-  width: 280px;
+  top: 47px;
+  width: 260px;
   border: none;
-  background-color: rgb(26, 39, 53);
+  background-color: rgb(26, 33, 41);
   color: #aaa;
+  box-shadow: 0 4px 6px 0 rgba(29, 29, 31, 0.28);
   font-family: Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 0.85rem;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   z-index: 2;
@@ -50,9 +64,54 @@
 
 .react-autosuggest__suggestion {
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 10px 50px;
 }
 
 .react-autosuggest__suggestion--highlighted {
-  background-color: #ddd;
+  background-color: rgb(38, 172, 89);
+  color: rgb(17, 17, 17);
+}
+
+.btn-submit {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  background-color: transparent;
+  border: none;
+  align-self: stretch;
+  flex-grow: 1;
+  cursor: pointer;
+  border-radius: 0 4px 0px 0;
+}
+
+.search-icon {
+  color: rgb(182, 182, 182);
+  transition: color 0.3s ease-in;
+}
+
+.search-icon:hover {
+  color: rgb(70, 170, 66);
+}
+
+.btn-clear {
+  position: absolute;
+  top: 12px;
+  left: 225px;
+  background-color: transparent;
+  border: none;
+  align-self: stretch;
+  flex-grow: 1;
+  cursor: pointer;
+  border-radius: 0 4px 0px 0;
+}
+
+.clear-icon {
+  transform: scale(0.8);
+  color: rgb(182, 182, 182);
+  transition: 0.4s ease-in-out;
+}
+
+.clear-icon:hover {
+  color: rgb(250, 249, 243);
+  transform: scale(0.9);
 }

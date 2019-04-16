@@ -21,7 +21,7 @@ function CircularIndeterminate(props) {
 }
 
 CircularIndeterminate.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.shape({ progress: PropTypes.string.isRequired }).isRequired
 };
 
 export default withStyles(styles)(CircularIndeterminate);
