@@ -31,11 +31,11 @@ class AutoComplete extends React.Component {
     };
   }
 
-  onChange = (event, { newValue }) => {
+  onChange = (event, { newValue, method }) => {
     const { handleChange } = this.props;
     handleChange(newValue);
     this.setState({
-      value: newValue
+      value: method === "enter" ? "" : newValue
     });
   };
 
@@ -93,12 +93,13 @@ class AutoComplete extends React.Component {
         className="form-container active-form"
       >
         <Autosuggest
-          suggestions={suggestions}
+          suggestions={suggestions.slice(0, 10)}
           onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
           onSuggestionsClearRequested={this.onSuggestionsClearRequested}
           getSuggestionValue={getSuggestionValue}
           renderSuggestion={renderSuggestion}
           inputProps={inputProps}
+          highlightFirstSuggestion
         />
         <button
           type="button"
@@ -108,9 +109,9 @@ class AutoComplete extends React.Component {
         >
           <ClearIcon className="clear-icon" />
         </button>
-        <button type="submit" className="btn-submit">
+        <div className="btn-submit">
           <SearchIcon className="search-icon" />
-        </button>
+        </div>
       </form>
     );
   }

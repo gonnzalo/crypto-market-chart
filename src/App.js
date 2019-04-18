@@ -6,6 +6,7 @@ import LoadingProgress from "./components/LoadingProgress";
 import AutoComplete from "./components/AutoComplete";
 import "./App.css";
 
+// Custon Hook
 const useCoinGeckoApi = symbol => {
   const [data, setData] = useState([]);
   const [url, setUrl] = useState();
@@ -24,6 +25,7 @@ const useCoinGeckoApi = symbol => {
   ]);
   const [updateChart, setUpdateChart] = useState(false);
 
+  // Render default cryptocurrencies on Chart, on first render
   useEffect(() => {
     const promises = cryptocurrencies.map(async (value, i) => {
       const response = await axios({
@@ -42,6 +44,7 @@ const useCoinGeckoApi = symbol => {
     });
   }, []);
 
+  // Update Chart on api call
   useEffect(() => {
     const fetchData = async () => {
       if (cryptocurrencies.indexOf(symbol) < 0) {
@@ -60,13 +63,14 @@ const useCoinGeckoApi = symbol => {
         setCryptocurrencies([...cryptocurrencies, symbol]);
       }
     };
-    fetchData();
+    fetchData().catch(() => setIsLoading(false));
   }, [url]);
 
   const doFetch = myUrl => {
     setUrl(myUrl);
   };
 
+  // Filter cryptocurrencies to display
   function toggleCrypto(e) {
     setData(
       data.filter(cryptos => {
@@ -78,6 +82,7 @@ const useCoinGeckoApi = symbol => {
     setUpdateChart(!updateChart);
   }
 
+  // remove cryptocurrency
   function removeCrypto(e) {
     const { value } = e.target;
     setCryptocurrencies(cryptocurrencies.filter(v => v !== value));
@@ -118,7 +123,6 @@ function App() {
     );
 
     event.target.reset();
-
     event.preventDefault();
   }
 

@@ -1,7 +1,18 @@
+:root {
+  --color: rgb(47, 176, 199);
+}
+
 .form-container {
+  margin-left: 0.5rem;
   position: relative;
   width: 260px;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    margin-bottom: 1rem;
+  }
 }
 
 .react-autosuggest__container {
@@ -27,7 +38,7 @@
   outline: none;
   color: #aaa;
   background-color: rgb(26, 33, 41);
-  border: 1px solid rgb(38, 172, 89);
+  border: 1px solid var(--color);
 }
 
 .react-autosuggest__input--open {
@@ -42,7 +53,7 @@
 .react-autosuggest__suggestions-container--open {
   display: block;
   position: absolute;
-  top: 47px;
+  top: 46px;
   width: 260px;
   border: none;
   background-color: rgb(26, 33, 41);
@@ -50,7 +61,8 @@
   box-shadow: 0 4px 6px 0 rgba(29, 29, 31, 0.28);
   font-family: Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  text-transform: capitalize;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   z-index: 2;
@@ -68,7 +80,7 @@
 }
 
 .react-autosuggest__suggestion--highlighted {
-  background-color: rgb(38, 172, 89);
+  background-color: var(--color);
   color: rgb(17, 17, 17);
 }
 
@@ -80,17 +92,11 @@
   border: none;
   align-self: stretch;
   flex-grow: 1;
-  cursor: pointer;
   border-radius: 0 4px 0px 0;
 }
 
 .search-icon {
   color: rgb(182, 182, 182);
-  transition: color 0.3s ease-in;
-}
-
-.search-icon:hover {
-  color: rgb(70, 170, 66);
 }
 
 .btn-clear {
@@ -112,6 +118,6 @@
 }
 
 .clear-icon:hover {
-  color: rgb(250, 249, 243);
+  color: rgb(218, 218, 218);
   transform: scale(0.9);
 }

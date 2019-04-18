@@ -2,11 +2,13 @@
   margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
+  align-content: stretch;
 }
 
 .btns-container {
   flex: 1 1 0;
   display: flex;
+  margin: 0.5rem;
   transition: transform 0.3s;
 }
 
@@ -18,34 +20,48 @@
   flex: 1 1 0;
   font-size: 1.1rem;
   padding: 0.5rem;
-  background-color: rgb(99, 219, 99);
+  background-color: rgb(137, 139, 137);
   color: rgb(25, 32, 88);
   font-family: "Ubuntu", sans-serif;
   border-radius: 1px;
   border: none;
   border-right: none;
-  margin: 1rem 0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 400;
   cursor: pointer;
   outline: none;
-  opacity: 0.4;
   transition: 0.3s ease-in-out;
 }
 
+@media (max-width: 480px) {
+  .btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .btn {
+    font-size: 1rem;
+  }
+}
+
 .btn:hover {
-  opacity: 1;
-  background-color: rgb(106, 248, 106);
+  background-color: rgb(97, 206, 97);
   box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .active {
+  background-color: rgb(97, 206, 97);
+}
+
+.active:hover {
   opacity: 1;
+  background-color: rgb(137, 139, 137);
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .btn-remove {
-  margin: 1rem 0.5rem 1rem 0;
   border: none;
   border-left: none;
   background-color: rgb(17, 17, 17);
@@ -55,17 +71,12 @@
   cursor: pointer;
   font-weight: 500;
   padding: 0.1rem 0.9rem;
-  opacity: 0.4;
   transition: 0.3s ease-in-out;
 }
 
 .btn-remove:hover {
   opacity: 1;
   background-color: rgb(175, 57, 57);
-}
-
-.active-remove {
-  opacity: 1;
 }
 
 .active-remove:hover {

@@ -33,9 +33,6 @@ const symbolsList = [
     id: "tron"
   },
   {
-    id: "bitcoin-cash-sv"
-  },
-  {
     id: "monero"
   },
   {
@@ -43,6 +40,9 @@ const symbolsList = [
   },
   {
     id: "cosmos"
+  },
+  {
+    id: "bitcoin-cash-sv"
   },
   {
     id: "tezos"
@@ -75,10 +75,10 @@ const symbolsList = [
     id: "crypto-com-chain"
   },
   {
-    id: "vechain"
+    id: "basic-attention-token"
   },
   {
-    id: "basic-attention-token"
+    id: "vechain"
   },
   {
     id: "dogecoin"
@@ -87,31 +87,31 @@ const symbolsList = [
     id: "bitcoin-gold"
   },
   {
-    id: "waves"
-  },
-  {
     id: "omisego"
   },
   {
     id: "lisk"
   },
   {
+    id: "waves"
+  },
+  {
     id: "usd-coin"
-  },
-  {
-    id: "qtum"
-  },
-  {
-    id: "decred"
   },
   {
     id: "holotoken"
   },
   {
-    id: "augur"
+    id: "decred"
+  },
+  {
+    id: "qtum"
   },
   {
     id: "nano"
+  },
+  {
+    id: "augur"
   },
   {
     id: "bitcoin-diamond"
@@ -126,25 +126,28 @@ const symbolsList = [
     id: "0x"
   },
   {
-    id: "iostoken"
+    id: "zilliqa"
   },
   {
     id: "chainlink"
   },
   {
-    id: "zilliqa"
+    id: "bytom"
   },
   {
-    id: "bytom"
+    id: "iostoken"
   },
   {
     id: "icon"
   },
   {
+    id: "bytecoin"
+  },
+  {
     id: "bitshares"
   },
   {
-    id: "bytecoin"
+    id: "aelf"
   },
   {
     id: "digibyte"
@@ -153,7 +156,7 @@ const symbolsList = [
     id: "aeternity"
   },
   {
-    id: "steem"
+    id: "pundi-x"
   },
   {
     id: "enjincoin"
@@ -162,7 +165,7 @@ const symbolsList = [
     id: "verge"
   },
   {
-    id: "pundi-x"
+    id: "steem"
   },
   {
     id: "siacoin"
@@ -171,40 +174,40 @@ const symbolsList = [
     id: "komodo"
   },
   {
-    id: "lambda"
-  },
-  {
-    id: "stratis"
-  },
-  {
     id: "paxos-standard"
-  },
-  {
-    id: "digitex-futures-exchange"
   },
   {
     id: "kucoin-shares"
   },
   {
-    id: "huobi-token"
+    id: "stratis"
   },
   {
-    id: "ark"
+    id: "digitex-futures-exchange"
+  },
+  {
+    id: "lambda"
+  },
+  {
+    id: "theta-token"
   },
   {
     id: "status"
   },
   {
+    id: "ark"
+  },
+  {
     id: "mixin"
+  },
+  {
+    id: "huobi-token"
   },
   {
     id: "dai"
   },
   {
     id: "golem"
-  },
-  {
-    id: "theta-token"
   },
   {
     id: "factom"
@@ -219,19 +222,22 @@ const symbolsList = [
     id: "ardor"
   },
   {
-    id: "ultrain"
-  },
-  {
     id: "decentraland"
   },
   {
     id: "quark-chain"
   },
   {
-    id: "bittorrent-2"
+    id: "ultrain"
   },
   {
     id: "monaco"
+  },
+  {
+    id: "bittorrent-2"
+  },
+  {
+    id: "maidsafecoin"
   },
   {
     id: "hshare"
@@ -240,28 +246,19 @@ const symbolsList = [
     id: "nebulas"
   },
   {
-    id: "revain"
+    id: "pivx"
   },
   {
     id: "waltonchain"
   },
   {
-    id: "maidsafecoin"
-  },
-  {
-    id: "aelf"
-  },
-  {
-    id: "pivx"
-  },
-  {
-    id: "loopring"
+    id: "revain"
   },
   {
     id: "zcoin"
   },
   {
-    id: "elastos"
+    id: "loopring"
   },
   {
     id: "aurora"
@@ -270,10 +267,10 @@ const symbolsList = [
     id: "aion"
   },
   {
-    id: "populous"
+    id: "bibox-token"
   },
   {
-    id: "electroneum"
+    id: "elastos"
   },
   {
     id: "qash"
@@ -282,10 +279,13 @@ const symbolsList = [
     id: "power-ledger"
   },
   {
-    id: "neon-exchange"
+    id: "populous"
   },
   {
-    id: "loom-network"
+    id: "electroneum"
+  },
+  {
+    id: "maximine"
   },
   {
     id: "reddcoin"
@@ -294,13 +294,7 @@ const symbolsList = [
     id: "polymath-network"
   },
   {
-    id: "bibox-token"
-  },
-  {
-    id: "zencash"
-  },
-  {
-    id: "kyber-network"
+    id: "loom-network"
   },
   {
     id: "metaverse-etp"
@@ -309,22 +303,37 @@ const symbolsList = [
     id: "gas"
   },
   {
-    id: "maximine"
+    id: "bancor"
   },
   {
-    id: "bancor"
+    id: "zencash"
+  },
+  {
+    id: "kyber-network"
   },
   {
     id: "wanchain"
   },
   {
-    id: "monacoin"
+    id: "dent"
   },
   {
     id: "nexo"
   },
   {
-    id: "enigma"
+    id: "neon-exchange"
+  },
+  {
+    id: "monacoin"
+  },
+  {
+    id: "iotex"
+  },
+  {
+    id: "storj"
+  },
+  {
+    id: "rif-token"
   },
   {
     id: "true-chain"
@@ -333,16 +342,7 @@ const symbolsList = [
     id: "digixdao"
   },
   {
-    id: "dent"
-  },
-  {
-    id: "storj"
-  },
-  {
-    id: "iotex"
-  },
-  {
-    id: "rif-token"
+    id: "enigma"
   },
   {
     id: "odem"
@@ -351,49 +351,40 @@ const symbolsList = [
     id: "celer-network"
   },
   {
-    id: "tenx"
+    id: "cindicator"
   },
   {
     id: "tomochain"
   },
   {
-    id: "byteball"
-  },
-  {
-    id: "nxt"
-  },
-  {
     id: "iexec-rlc"
-  },
-  {
-    id: "groestlcoin"
   },
   {
     id: "nuls"
   },
   {
-    id: "cindicator"
-  },
-  {
-    id: "syscoin"
-  },
-  {
-    id: "funfair"
-  },
-  {
-    id: "cybermiles"
-  },
-  {
     id: "kin"
   },
   {
-    id: "libra-credit"
+    id: "nxt"
+  },
+  {
+    id: "byteball"
+  },
+  {
+    id: "tenx"
+  },
+  {
+    id: "groestlcoin"
   },
   {
     id: "veritaseum"
   },
   {
-    id: "dragonchain"
+    id: "funfair"
+  },
+  {
+    id: "syscoin"
   },
   {
     id: "zb-token"
@@ -402,34 +393,34 @@ const symbolsList = [
     id: "odyssey"
   },
   {
-    id: "kan"
+    id: "cybermiles"
   },
   {
-    id: "quant-network"
+    id: "libra-credit"
   },
   {
-    id: "apollo"
+    id: "dragonchain"
+  },
+  {
+    id: "tokenpay"
   },
   {
     id: "smartcash"
   },
   {
+    id: "apollo"
+  },
+  {
     id: "singularitynet"
-  },
-  {
-    id: "civic"
-  },
-  {
-    id: "mainframe"
   },
   {
     id: "tokenclub"
   },
   {
-    id: "arcblock"
+    id: "kan"
   },
   {
-    id: "proximax"
+    id: "civic"
   },
   {
     id: "clams"
@@ -438,139 +429,157 @@ const symbolsList = [
     id: "noah-coin"
   },
   {
-    id: "metal"
+    id: "arcblock"
   },
   {
-    id: "tokenpay"
+    id: "quant-network"
   },
   {
-    id: "vertcoin"
-  },
-  {
-    id: "neblio"
-  },
-  {
-    id: "infinity-economics"
-  },
-  {
-    id: "mithril"
-  },
-  {
-    id: "bankera"
-  },
-  {
-    id: "nexus"
-  },
-  {
-    id: "mediblocx"
-  },
-  {
-    id: "wabi"
-  },
-  {
-    id: "republic-protocol"
-  },
-  {
-    id: "matrix-ai-network"
-  },
-  {
-    id: "grin"
-  },
-  {
-    id: "particl"
-  },
-  {
-    id: "cosmo-coin"
-  },
-  {
-    id: "wagerr"
-  },
-  {
-    id: "gifto"
+    id: "swarm"
   },
   {
     id: "coinbene-token"
   },
   {
-    id: "tokencard"
+    id: "proximax"
   },
   {
-    id: "fetch-ai"
+    id: "vertcoin"
   },
   {
-    id: "smartmesh"
+    id: "metal"
   },
   {
-    id: "bit-z-token"
+    id: "infinity-economics"
   },
   {
     id: "etherzero"
   },
   {
-    id: "energi"
+    id: "particl"
   },
   {
-    id: "nectar-token"
-  },
-  {
-    id: "aragon"
-  },
-  {
-    id: "moeda-loyalty-points"
-  },
-  {
-    id: "request-network"
-  },
-  {
-    id: "skycoin"
-  },
-  {
-    id: "eosdac"
-  },
-  {
-    id: "fantom"
-  },
-  {
-    id: "eidoo"
+    id: "mainframe"
   },
   {
     id: "asch"
   },
   {
-    id: "fsn"
+    id: "neblio"
   },
   {
-    id: "ethos"
+    id: "matrix-ai-network"
   },
   {
-    id: "gochain"
+    id: "mithril"
   },
   {
-    id: "telcoin"
+    id: "nexus"
   },
   {
-    id: "einsteinium"
+    id: "grin"
   },
   {
-    id: "smartlands"
+    id: "bit-z-token"
+  },
+  {
+    id: "fetch-ai"
+  },
+  {
+    id: "eidoo"
+  },
+  {
+    id: "tokencard"
+  },
+  {
+    id: "energi"
   },
   {
     id: "united-traders-token"
   },
   {
-    id: "bread"
+    id: "wagerr"
+  },
+  {
+    id: "wabi"
+  },
+  {
+    id: "gifto"
+  },
+  {
+    id: "republic-protocol"
+  },
+  {
+    id: "aragon"
+  },
+  {
+    id: "smartmesh"
+  },
+  {
+    id: "bankera"
+  },
+  {
+    id: "skycoin"
+  },
+  {
+    id: "cosmo-coin"
+  },
+  {
+    id: "moeda-loyalty-points"
+  },
+  {
+    id: "fantom"
+  },
+  {
+    id: "einsteinium"
+  },
+  {
+    id: "gochain"
+  },
+  {
+    id: "request-network"
+  },
+  {
+    id: "fsn"
   },
   {
     id: "crypto20"
   },
   {
-    id: "iht-real-estate-protocol"
+    id: "mediblocx"
+  },
+  {
+    id: "smartlands"
+  },
+  {
+    id: "ethos"
   },
   {
     id: "gnosis"
   },
   {
+    id: "bread"
+  },
+  {
+    id: "nectar-token"
+  },
+  {
+    id: "telcoin"
+  },
+  {
+    id: "high-performance-blockchain"
+  },
+  {
+    id: "eosdac"
+  },
+  {
+    id: "cube"
+  },
+  {
     id: "sirin-labs-token"
+  },
+  {
+    id: "key"
   },
   {
     id: "genesis-vision"
@@ -579,40 +588,43 @@ const symbolsList = [
     id: "bcv"
   },
   {
-    id: "high-performance-blockchain"
-  },
-  {
-    id: "cube"
-  },
-  {
-    id: "endor"
-  },
-  {
-    id: "key"
-  },
-  {
-    id: "educare"
-  },
-  {
-    id: "everex"
-  },
-  {
-    id: "raiden-network"
-  },
-  {
-    id: "oneroot-network"
-  },
-  {
-    id: "simple-token"
-  },
-  {
     id: "hycon"
+  },
+  {
+    id: "scroll-token"
   },
   {
     id: "ignis"
   },
   {
+    id: "endor"
+  },
+  {
     id: "namecoin"
+  },
+  {
+    id: "simple-token"
+  },
+  {
+    id: "oneroot-network"
+  },
+  {
+    id: "raiden-network"
+  },
+  {
+    id: "utrust"
+  },
+  {
+    id: "ripio-credit-network"
+  },
+  {
+    id: "everex"
+  },
+  {
+    id: "dynamic-trading-rights"
+  },
+  {
+    id: "gemini-dollar"
   },
   {
     id: "storm"
@@ -621,133 +633,124 @@ const symbolsList = [
     id: "streamr-datacoin"
   },
   {
-    id: "robotina"
-  },
-  {
-    id: "thekey"
-  },
-  {
-    id: "gemini-dollar"
-  },
-  {
-    id: "dynamic-trading-rights"
-  },
-  {
-    id: "unlimitedip"
-  },
-  {
-    id: "utrust"
-  },
-  {
-    id: "origintrail"
-  },
-  {
-    id: "ripio-credit-network"
-  },
-  {
-    id: "bluzelle"
+    id: "nkn"
   },
   {
     id: "blocknet"
   },
   {
-    id: "scroll-token"
+    id: "peercoin"
   },
   {
-    id: "medishares"
+    id: "origintrail"
   },
   {
     id: "nav-coin"
   },
   {
+    id: "iht-real-estate-protocol"
+  },
+  {
+    id: "unlimitedip"
+  },
+  {
+    id: "medishares"
+  },
+  {
     id: "adex"
   },
   {
-    id: "dentacoin"
-  },
-  {
-    id: "nkn"
-  },
-  {
-    id: "time-new-bank"
-  },
-  {
-    id: "ruff"
-  },
-  {
-    id: "peercoin"
-  },
-  {
-    id: "chainium"
-  },
-  {
-    id: "cnn"
-  },
-  {
-    id: "credits"
-  },
-  {
-    id: "lockchain"
-  },
-  {
-    id: "bezant"
-  },
-  {
-    id: "salt"
-  },
-  {
-    id: "poet"
-  },
-  {
-    id: "deepbrain-chain"
-  },
-  {
-    id: "stasis-eurs"
-  },
-  {
-    id: "emercoin"
-  },
-  {
-    id: "crypterium"
-  },
-  {
-    id: "swftcoin"
-  },
-  {
-    id: "viacoin"
+    id: "bluzelle"
   },
   {
     id: "flo"
   },
   {
-    id: "coinus"
+    id: "dentacoin"
+  },
+  {
+    id: "time-new-bank"
+  },
+  {
+    id: "thekey"
+  },
+  {
+    id: "emercoin"
+  },
+  {
+    id: "stasis-eurs"
+  },
+  {
+    id: "poet"
+  },
+  {
+    id: "lockchain"
+  },
+  {
+    id: "credits"
   },
   {
     id: "apis"
   },
   {
-    id: "scry-info"
+    id: "crypterium"
   },
   {
-    id: "achain"
+    id: "ruff"
+  },
+  {
+    id: "robotina"
+  },
+  {
+    id: "tokenize-xchange"
+  },
+  {
+    id: "coinus"
+  },
+  {
+    id: "chainium"
+  },
+  {
+    id: "rchain"
+  },
+  {
+    id: "viacoin"
   },
   {
     id: "substratum"
   },
   {
-    id: "ethlend"
+    id: "cnn"
   },
   {
-    id: "quantum-resistant-ledger"
+    id: "bezant"
+  },
+  {
+    id: "deepbrain-chain"
+  },
+  {
+    id: "salt"
+  },
+  {
+    id: "achain"
+  },
+  {
+    id: "clipper-coin-capital"
+  },
+  {
+    id: "scry-info"
+  },
+  {
+    id: "ethlend"
   },
   {
     id: "dropil"
   },
   {
-    id: "medibloc"
+    id: "ins-ecosystem"
   },
   {
-    id: "tokenize-xchange"
+    id: "pumapay"
   },
   {
     id: "ins-ecosystem"
@@ -756,25 +759,7 @@ const symbolsList = [
     id: "dmarket"
   },
   {
-    id: "clipper-coin-capital"
-  },
-  {
     id: "edgeless"
-  },
-  {
-    id: "data"
-  },
-  {
-    id: "red-pulse"
-  },
-  {
-    id: "first-blood"
-  },
-  {
-    id: "game"
-  },
-  {
-    id: "digitalnote"
   },
   {
     id: "t-os"
@@ -783,55 +768,31 @@ const symbolsList = [
     id: "sonm"
   },
   {
-    id: "hydro"
+    id: "swftcoin"
   },
   {
-    id: "rchain"
+    id: "red-pulse"
   },
   {
-    id: "bnktothefuture"
+    id: "digitalnote"
+  },
+  {
+    id: "game"
+  },
+  {
+    id: "medibloc"
+  },
+  {
+    id: "data"
+  },
+  {
+    id: "educare"
   },
   {
     id: "zclassic"
   },
   {
-    id: "hitchain"
-  },
-  {
-    id: "district0x"
-  },
-  {
-    id: "beam"
-  },
-  {
-    id: "iot-chain"
-  },
-  {
-    id: "wowbit"
-  },
-  {
-    id: "you-chain"
-  },
-  {
-    id: "pumapay"
-  },
-  {
-    id: "ubiq"
-  },
-  {
-    id: "alis"
-  },
-  {
-    id: "coss"
-  },
-  {
-    id: "medical-token-currency"
-  },
-  {
-    id: "pchain"
-  },
-  {
-    id: "singulardtv"
+    id: "blockv"
   },
   {
     id: "foam-protocol"
@@ -840,88 +801,112 @@ const symbolsList = [
     id: "influence-chain"
   },
   {
-    id: "genaro-network"
+    id: "you-chain"
   },
   {
-    id: "bitbay"
+    id: "hydro"
   },
   {
-    id: "stakenet"
+    id: "spectrecoin"
   },
   {
-    id: "blockv"
+    id: "alis"
+  },
+  {
+    id: "bnktothefuture"
+  },
+  {
+    id: "zelcash"
   },
   {
     id: "metronome"
   },
   {
-    id: "everus"
+    id: "stakenet"
   },
   {
-    id: "xmax"
+    id: "bitbay"
   },
   {
-    id: "hicoin"
+    id: "ubiq"
   },
   {
-    id: "universa"
+    id: "singulardtv"
   },
   {
-    id: "pepecash"
+    id: "beam"
   },
   {
-    id: "kambria"
+    id: "coss"
   },
   {
-    id: "gsenetwork"
+    id: "iot-chain"
   },
   {
-    id: "steem-dollars"
+    id: "hitchain"
   },
   {
-    id: "spendcoin"
-  },
-  {
-    id: "btu-protocol"
-  },
-  {
-    id: "zip"
-  },
-  {
-    id: "vite"
-  },
-  {
-    id: "xyo-network"
-  },
-  {
-    id: "manna"
+    id: "pchain"
   },
   {
     id: "loki-network"
   },
   {
-    id: "jibrel"
+    id: "district0x"
   },
   {
-    id: "dxchain"
+    id: "btu-protocol"
   },
   {
-    id: "graft-blockchain"
+    id: "pepecash"
   },
   {
-    id: "aeron"
-  },
-  {
-    id: "poa-network"
+    id: "xmax"
   },
   {
     id: "lympo"
   },
   {
+    id: "hicoin"
+  },
+  {
+    id: "aeron"
+  },
+  {
+    id: "pillar"
+  },
+  {
+    id: "spendcoin"
+  },
+  {
+    id: "genaro-network"
+  },
+  {
+    id: "medical-token-currency"
+  },
+  {
     id: "monetha"
   },
   {
-    id: "spectrecoin"
+    id: "steem-dollars"
+  },
+  {
+    id: "poa-network"
+  },
+  {
+    id: "universa"
+  },
+  {
+    id: "everus"
+  },
+  {
+    id: "kambria"
+  },
+  {
+    id: "vite"
+  },
+  {
+    id: "manna"
   },
   {
     id: "qlink"
@@ -930,217 +915,241 @@ const symbolsList = [
     id: "burst"
   },
   {
-    id: "tierion"
+    id: "jibrel"
   },
   {
-    id: "vibe"
+    id: "dxchain"
   },
   {
-    id: "appcoins"
-  },
-  {
-    id: "wepower"
-  },
-  {
-    id: "agrello"
+    id: "xyo-network"
   },
   {
     id: "refereum"
   },
   {
-    id: "electra"
-  },
-  {
-    id: "pillar"
-  },
-  {
-    id: "all-sports"
-  },
-  {
     id: "canonchain"
-  },
-  {
-    id: "leocoin"
-  },
-  {
-    id: "envion"
-  },
-  {
-    id: "lbry-credits"
-  },
-  {
-    id: "gulden"
-  },
-  {
-    id: "mytoken"
-  },
-  {
-    id: "internet-node-token"
-  },
-  {
-    id: "gamecredits"
-  },
-  {
-    id: "amber"
-  },
-  {
-    id: "penta"
-  },
-  {
-    id: "yuan-chain-coin"
   },
   {
     id: "bitex-global"
   },
   {
-    id: "selfkey"
-  },
-  {
-    id: "waves-community-token"
-  },
-  {
-    id: "pascalcoin"
-  },
-  {
-    id: "zrcoin"
-  },
-  {
-    id: "mobius"
-  },
-  {
-    id: "safeinsure"
-  },
-  {
-    id: "blox"
+    id: "gamecredits"
   },
   {
     id: "multivac"
   },
   {
-    id: "fortuna"
+    id: "envion"
   },
   {
-    id: "zelcash"
+    id: "agrello"
   },
   {
-    id: "dero"
+    id: "vibe"
+  },
+  {
+    id: "tierion"
+  },
+  {
+    id: "internet-node-token"
+  },
+  {
+    id: "lbry-credits"
+  },
+  {
+    id: "wepower"
+  },
+  {
+    id: "leocoin"
+  },
+  {
+    id: "appcoins"
+  },
+  {
+    id: "gulden"
+  },
+  {
+    id: "yuan-chain-coin"
+  },
+  {
+    id: "graft-blockchain"
   },
   {
     id: "latoken"
   },
   {
-    id: "content-value-network"
+    id: "amber"
   },
   {
-    id: "mossland"
+    id: "zrcoin"
   },
   {
-    id: "lunyr"
+    id: "mytoken"
+  },
+  {
+    id: "all-sports"
+  },
+  {
+    id: "ternio"
+  },
+  {
+    id: "selfkey"
+  },
+  {
+    id: "safeinsure"
+  },
+  {
+    id: "zip"
+  },
+  {
+    id: "pascalcoin"
+  },
+  {
+    id: "fortuna"
+  },
+  {
+    id: "gsenetwork"
+  },
+  {
+    id: "commerceblock-token"
+  },
+  {
+    id: "penta"
+  },
+  {
+    id: "waves-community-token"
+  },
+  {
+    id: "wowbit"
+  },
+  {
+    id: "blox"
+  },
+  {
+    id: "mobius"
   },
   {
     id: "dock"
   },
   {
-    id: "decentbet"
-  },
-  {
-    id: "ulord"
-  },
-  {
-    id: "stacs-token"
-  },
-  {
-    id: "primas"
-  },
-  {
-    id: "halalchain"
-  },
-  {
-    id: "bitcore"
-  },
-  {
     id: "airswap"
   },
   {
-    id: "blockport"
-  },
-  {
-    id: "ink"
-  },
-  {
-    id: "napoleon-x"
-  },
-  {
-    id: "paypie"
-  },
-  {
-    id: "cpchain"
-  },
-  {
-    id: "bittube"
-  },
-  {
-    id: "primecoin"
-  },
-  {
-    id: "yee"
-  },
-  {
-    id: "turtlecoin"
-  },
-  {
-    id: "six-network"
-  },
-  {
-    id: "nix-platform"
+    id: "lunyr"
   },
   {
     id: "b2b"
   },
   {
-    id: "boscoin-2"
+    id: "napoleon-x"
   },
   {
-    id: "plus-coin"
+    id: "bittube"
   },
   {
-    id: "bottos"
+    id: "dero"
+  },
+  {
+    id: "electra"
+  },
+  {
+    id: "ulord"
+  },
+  {
+    id: "mossland"
   },
   {
     id: "yoyow"
   },
   {
-    id: "credo"
+    id: "boscoin-2"
   },
   {
-    id: "ovcode"
+    id: "content-value-network"
+  },
+  {
+    id: "bitcore"
+  },
+  {
+    id: "decentbet"
+  },
+  {
+    id: "daostack"
+  },
+  {
+    id: "primecoin"
+  },
+  {
+    id: "stacs-token"
+  },
+  {
+    id: "plus-coin"
+  },
+  {
+    id: "halalchain"
+  },
+  {
+    id: "ink"
+  },
+  {
+    id: "litex"
+  },
+  {
+    id: "cpchain"
   },
   {
     id: "tripio"
   },
   {
+    id: "bottos"
+  },
+  {
+    id: "nix-platform"
+  },
+  {
+    id: "blockport"
+  },
+  {
+    id: "turtlecoin"
+  },
+  {
+    id: "iocoin"
+  },
+  {
+    id: "mobilego"
+  },
+  {
     id: "atn"
-  },
-  {
-    id: "swarm"
-  },
-  {
-    id: "seele"
   },
   {
     id: "jex-token"
   },
   {
-    id: "restart-energy"
-  },
-  {
     id: "viberate"
   },
   {
-    id: "usechain"
+    id: "seele"
   },
   {
-    id: "mobilego"
+    id: "maecenas"
+  },
+  {
+    id: "bitCNY"
+  },
+  {
+    id: "restart-energy"
+  },
+  {
+    id: "aurora-dao"
+  },
+  {
+    id: "nimiq-2"
+  },
+  {
+    id: "stableusd"
+  },
+  {
+    id: "adtoken"
   },
   {
     id: "measurable-data-token"
@@ -1149,103 +1158,76 @@ const symbolsList = [
     id: "blue-whale"
   },
   {
-    id: "aidus"
-  },
-  {
-    id: "aurora-dao"
-  },
-  {
-    id: "bitCNY"
-  },
-  {
-    id: "nimiq-2"
-  },
-  {
-    id: "beekan"
-  },
-  {
-    id: "stableusd"
-  },
-  {
-    id: "fanstime"
+    id: "etherparty"
   },
   {
     id: "mercury"
   },
   {
-    id: "havven"
-  },
-  {
-    id: "adtoken"
-  },
-  {
-    id: "nucleus-vision"
-  },
-  {
-    id: "spankchain"
-  },
-  {
-    id: "etherparty"
-  },
-  {
     id: "shift"
   },
   {
-    id: "maecenas"
+    id: "yee"
   },
   {
-    id: "grid"
-  },
-  {
-    id: "babb"
-  },
-  {
-    id: "smartofgiving"
-  },
-  {
-    id: "litecoin-cash"
-  },
-  {
-    id: "iocoin"
-  },
-  {
-    id: "legolas-exchange"
-  },
-  {
-    id: "openanx"
-  },
-  {
-    id: "potcoin"
-  },
-  {
-    id: "ebcoin"
+    id: "first-blood"
   },
   {
     id: "daps-token"
   },
   {
-    id: "hxro"
+    id: "fanstime"
   },
   {
-    id: "decent"
+    id: "paypie"
   },
   {
-    id: "litex"
+    id: "nucleus-vision"
+  },
+  {
+    id: "databroker-dao"
+  },
+  {
+    id: "primas"
+  },
+  {
+    id: "smartofgiving"
+  },
+  {
+    id: "etherisc"
+  },
+  {
+    id: "babb"
+  },
+  {
+    id: "counterparty"
+  },
+  {
+    id: "beekan"
+  },
+  {
+    id: "openanx"
+  },
+  {
+    id: "ion"
   },
   {
     id: "hut34-entropy"
   },
   {
-    id: "ternio"
+    id: "usechain"
   },
   {
-    id: "melon"
+    id: "spankchain"
   },
   {
-    id: "deeponion"
+    id: "hxro"
   },
   {
-    id: "polis"
+    id: "legolas-exchange"
+  },
+  {
+    id: "aidus"
   },
   {
     id: "feathercoin"
@@ -1254,250 +1236,1018 @@ const symbolsList = [
     id: "cloudbric"
   },
   {
-    id: "polybius"
+    id: "potcoin"
   },
   {
-    id: "chatcoin"
+    id: "darico"
+  },
+  {
+    id: "litecoin-cash"
+  },
+  {
+    id: "havven"
+  },
+  {
+    id: "melon"
+  },
+  {
+    id: "xscoin"
   },
   {
     id: "ucot"
   },
   {
-    id: "daostack"
+    id: "deeponion"
   },
   {
-    id: "edrcoin"
+    id: "grid"
   },
   {
-    id: "dacc"
-  },
-  {
-    id: "cobinhood"
-  },
-  {
-    id: "hempcoin-thc"
-  },
-  {
-    id: "counterparty"
-  },
-  {
-    id: "app-alliance-association"
-  },
-  {
-    id: "robet-coin"
-  },
-  {
-    id: "blackcoin"
-  },
-  {
-    id: "suncontract"
-  },
-  {
-    id: "box-token"
-  },
-  {
-    id: "peerplays"
-  },
-  {
-    id: "beetle-coin"
-  },
-  {
-    id: "spacechain-erc-20"
-  },
-  {
-    id: "blockmason-credit-protocol"
-  },
-  {
-    id: "qunqun"
-  },
-  {
-    id: "ac3"
-  },
-  {
-    id: "0chain"
-  },
-  {
-    id: "wings"
-  },
-  {
-    id: "apex"
-  },
-  {
-    id: "kickico"
-  },
-  {
-    id: "commerceblock-token"
-  },
-  {
-    id: "phantasma"
-  },
-  {
-    id: "databroker-dao"
-  },
-  {
-    id: "linda"
+    id: "chatcoin"
   },
   {
     id: "zmine"
   },
   {
-    id: "loyalcoin"
-  },
-  {
-    id: "airbloc-protocol"
-  },
-  {
-    id: "baasid"
-  },
-  {
-    id: "contentbox"
-  },
-  {
-    id: "ormeuscoin"
-  },
-  {
-    id: "zeepin"
-  },
-  {
-    id: "hashgard"
-  },
-  {
-    id: "digital-ticks"
-  },
-  {
-    id: "naga"
-  },
-  {
-    id: "sakura-bloom"
-  },
-  {
-    id: "propy"
-  },
-  {
-    id: "egretia"
-  },
-  {
-    id: "vericoin"
-  },
-  {
-    id: "lamden"
-  },
-  {
-    id: "bhpc"
-  },
-  {
-    id: "te-food"
-  },
-  {
-    id: "global-currency-reserve"
-  },
-  {
-    id: "delphy"
-  },
-  {
-    id: "life"
-  },
-  {
-    id: "xtrabytes"
-  },
-  {
-    id: "adamant-messenger"
-  },
-  {
-    id: "remme"
-  },
-  {
-    id: "digix-gold"
-  },
-  {
-    id: "edenchain"
-  },
-  {
-    id: "cryptoharbor"
-  },
-  {
-    id: "abcc-token"
-  },
-  {
-    id: "policypal"
-  },
-  {
-    id: "unikoin-gold"
-  },
-  {
-    id: "open-platform"
-  },
-  {
-    id: "concierge-io"
-  },
-  {
-    id: "sentinel-protocol"
+    id: "dacc"
   },
   {
     id: "zper"
   },
   {
-    id: "paccoin"
+    id: "robet-coin"
   },
   {
-    id: "molecular-future"
+    id: "suncontract"
   },
   {
-    id: "carvertical"
+    id: "phantasma"
   },
   {
-    id: "smartshare"
+    id: "hempcoin-thc"
   },
   {
-    id: "crowdcoin"
+    id: "cobinhood"
   },
   {
-    id: "tokes"
+    id: "polybius"
   },
   {
-    id: "colossuscoinxt"
+    id: "polis"
+  },
+  {
+    id: "kickico"
+  },
+  {
+    id: "decent"
+  },
+  {
+    id: "peerplays"
+  },
+  {
+    id: "six-network"
+  },
+  {
+    id: "linda"
+  },
+  {
+    id: "blackcoin"
+  },
+  {
+    id: "baasid"
+  },
+  {
+    id: "0chain"
+  },
+  {
+    id: "beetle-coin"
+  },
+  {
+    id: "digital-ticks"
+  },
+  {
+    id: "unikoin-gold"
   },
   {
     id: "coinsuper-ecosystem-network"
   },
   {
-    id: "paragon"
+    id: "blockmason-credit-protocol"
   },
   {
-    id: "haven"
+    id: "abcc-token"
   },
   {
-    id: "nos"
+    id: "qunqun"
   },
   {
-    id: "eterbase"
+    id: "spacechain-erc-20"
+  },
+  {
+    id: "apex"
+  },
+  {
+    id: "dimecoin"
+  },
+  {
+    id: "wings"
+  },
+  {
+    id: "contentbox"
+  },
+  {
+    id: "intelligent-investment-chain"
+  },
+  {
+    id: "ovcode"
+  },
+  {
+    id: "edrcoin"
+  },
+  {
+    id: "freyrchain"
+  },
+  {
+    id: "life"
+  },
+  {
+    id: "remme"
+  },
+  {
+    id: "get-token"
+  },
+  {
+    id: "vipstarcoin"
+  },
+  {
+    id: "loyalcoin"
+  },
+  {
+    id: "global-currency-reserve"
+  },
+  {
+    id: "zeepin"
   },
   {
     id: "veil"
   },
   {
-    id: "linkeye"
+    id: "bhpc"
   },
   {
-    id: "zeusshield"
+    id: "airbloc-protocol"
   },
   {
-    id: "zebi"
+    id: "vericoin"
   },
   {
-    id: "blockcdn"
+    id: "paccoin"
   },
   {
-    id: "crown"
+    id: "xtrabytes"
   },
   {
-    id: "blackmoon-crypto"
+    id: "delphy"
+  },
+  {
+    id: "egretia"
+  },
+  {
+    id: "thegcccoin"
+  },
+  {
+    id: "te-food"
+  },
+  {
+    id: "crowdcoin"
+  },
+  {
+    id: "propy"
+  },
+  {
+    id: "app-alliance-association"
+  },
+  {
+    id: "digix-gold"
   },
   {
     id: "howdoo"
   },
   {
+    id: "hashgard"
+  },
+  {
+    id: "edenchain"
+  },
+  {
+    id: "colossuscoinxt"
+  },
+  {
+    id: "naga"
+  },
+  {
+    id: "molecular-future"
+  },
+  {
+    id: "ac3"
+  },
+  {
+    id: "sentinel-protocol"
+  },
+  {
+    id: "divi"
+  },
+  {
+    id: "tokes"
+  },
+  {
+    id: "expanse"
+  },
+  {
+    id: "sakura-bloom"
+  },
+  {
+    id: "nexty"
+  },
+  {
+    id: "credo"
+  },
+  {
+    id: "zeusshield"
+  },
+  {
+    id: "ecc"
+  },
+  {
+    id: "ebcoin"
+  },
+  {
+    id: "blackmoon-crypto"
+  },
+  {
+    id: "crown"
+  },
+  {
+    id: "policypal"
+  },
+  {
+    id: "ormeuscoin"
+  },
+  {
+    id: "wearesatoshi"
+  },
+  {
+    id: "concierge-io"
+  },
+  {
+    id: "zebi"
+  },
+  {
+    id: "twist"
+  },
+  {
+    id: "gene-source-code-token"
+  },
+  {
+    id: "haven"
+  },
+  {
+    id: "skrumble-network"
+  },
+  {
+    id: "carvertical"
+  },
+  {
+    id: "qntu"
+  },
+  {
+    id: "lendingblock"
+  },
+  {
+    id: "bloom"
+  },
+  {
+    id: "paragon"
+  },
+  {
+    id: "cashaa"
+  },
+  {
+    id: "hyperion"
+  },
+  {
+    id: "lamden"
+  },
+  {
+    id: "decision-token"
+  },
+  {
+    id: "hive"
+  },
+  {
+    id: "trinity-network-credit"
+  },
+  {
+    id: "switcheo"
+  },
+  {
+    id: "linkeye"
+  },
+  {
+    id: "dadi"
+  },
+  {
+    id: "mooncoin"
+  },
+  {
+    id: "leverj"
+  },
+  {
+    id: "box-token"
+  },
+  {
+    id: "blockcdn"
+  },
+  {
+    id: "educoin"
+  },
+  {
+    id: "stealthcoin"
+  },
+  {
+    id: "pandacoin"
+  },
+  {
+    id: "adamant-messenger"
+  },
+  {
     id: "lightchain"
+  },
+  {
+    id: "catex-token"
+  },
+  {
+    id: "slate"
+  },
+  {
+    id: "smartshare"
+  },
+  {
+    id: "1irstcoin"
+  },
+  {
+    id: "gmb"
+  },
+  {
+    id: "lto-network"
+  },
+  {
+    id: "unibright"
+  },
+  {
+    id: "fintrux"
+  },
+  {
+    id: "wibson"
+  },
+  {
+    id: "coinpoker"
+  },
+  {
+    id: "polyswarm"
+  },
+  {
+    id: "eurocoinpay"
+  },
+  {
+    id: "otocash"
+  },
+  {
+    id: "gridcoin-research"
+  },
+  {
+    id: "phore"
+  },
+  {
+    id: "nos"
+  },
+  {
+    id: "daex"
+  },
+  {
+    id: "databits"
+  },
+  {
+    id: "evencoin"
+  },
+  {
+    id: "neumark"
+  },
+  {
+    id: "vegawallet-token"
+  },
+  {
+    id: "open-platform"
+  },
+  {
+    id: "bismuth"
+  },
+  {
+    id: "gincoin"
+  },
+  {
+    id: "covesting"
+  },
+  {
+    id: "cloakcoin"
+  },
+  {
+    id: "modum"
+  },
+  {
+    id: "diamond"
+  },
+  {
+    id: "neurotoken"
+  },
+  {
+    id: "nanjcoin"
+  },
+  {
+    id: "dipnet"
+  },
+  {
+    id: "thingsoperatingsystem"
+  },
+  {
+    id: "myce"
+  },
+  {
+    id: "sixdomainchain"
+  },
+  {
+    id: "experience-chain"
+  },
+  {
+    id: "myriadcoin"
+  },
+  {
+    id: "cvcoin"
+  },
+  {
+    id: "goldenfever"
+  },
+  {
+    id: "luxcoin"
+  },
+  {
+    id: "semux"
+  },
+  {
+    id: "palletone"
+  },
+  {
+    id: "radium"
+  },
+  {
+    id: "change"
+  },
+  {
+    id: "aidcoin"
+  },
+  {
+    id: "xaurum"
+  },
+  {
+    id: "cybervein"
+  },
+  {
+    id: "vinchain"
+  },
+  {
+    id: "bmax"
+  },
+  {
+    id: "pindex"
+  },
+  {
+    id: "suqa"
+  },
+  {
+    id: "zen-protocol"
+  },
+  {
+    id: "repme"
+  },
+  {
+    id: "dagger"
+  },
+  {
+    id: "ai-doctor"
+  },
+  {
+    id: "beat"
+  },
+  {
+    id: "pibble"
+  },
+  {
+    id: "xp"
+  },
+  {
+    id: "grearn"
+  },
+  {
+    id: "vexanium"
+  },
+  {
+    id: "qchi"
+  },
+  {
+    id: "axe"
+  },
+  {
+    id: "liquidity-network"
+  },
+  {
+    id: "pdx"
+  },
+  {
+    id: "fedoracoin"
+  },
+  {
+    id: "elastic"
+  },
+  {
+    id: "mtc-mesh-network"
+  },
+  {
+    id: "horuspay"
+  },
+  {
+    id: "monetaryunit"
+  },
+  {
+    id: "domraider"
+  },
+  {
+    id: "medicalchain"
+  },
+  {
+    id: "moneytoken"
+  },
+  {
+    id: "meritcoins"
+  },
+  {
+    id: "solarcoin"
+  },
+  {
+    id: "comsa"
+  },
+  {
+    id: "morpheus-labs"
+  },
+  {
+    id: "distributed-credit-chain"
+  },
+  {
+    id: "rotharium"
+  },
+  {
+    id: "acute-angle-cloud"
+  },
+  {
+    id: "sophiatx"
+  },
+  {
+    id: "eterbase"
+  },
+  {
+    id: "bitcoin-green"
+  },
+  {
+    id: "c3-wallet"
+  },
+  {
+    id: "olive"
+  },
+  {
+    id: "ipchain"
+  },
+  {
+    id: "tokenomy"
+  },
+  {
+    id: "qredit"
+  },
+  {
+    id: "nebula-ai"
+  },
+  {
+    id: "insurchain"
+  },
+  {
+    id: "zap"
+  },
+  {
+    id: "neurochain"
+  },
+  {
+    id: "uquid-coin"
+  },
+  {
+    id: "rate3"
+  },
+  {
+    id: "bitmart-token"
+  },
+  {
+    id: "webdollar"
+  },
+  {
+    id: "revolutionvr"
+  },
+  {
+    id: "lina"
+  },
+  {
+    id: "covalent"
+  },
+  {
+    id: "dacsee"
+  },
+  {
+    id: "cardstack"
+  },
+  {
+    id: "playchip"
+  },
+  {
+    id: "adshares"
+  },
+  {
+    id: "waykichain"
+  },
+  {
+    id: "taas"
+  },
+  {
+    id: "consensus"
+  },
+  {
+    id: "verasity"
+  },
+  {
+    id: "spectre-utility-token"
+  },
+  {
+    id: "soarcoin"
+  },
+  {
+    id: "infinitecoin"
+  },
+  {
+    id: "mediex"
+  },
+  {
+    id: "axpire"
+  },
+  {
+    id: "sentinel-group"
+  },
+  {
+    id: "quark"
+  },
+  {
+    id: "omni"
+  },
+  {
+    id: "stk"
+  },
+  {
+    id: "coinex-token"
+  },
+  {
+    id: "winding-tree"
+  },
+  {
+    id: "humaniq"
+  },
+  {
+    id: "marinecoin"
+  },
+  {
+    id: "aventus"
+  },
+  {
+    id: "fuzex"
+  },
+  {
+    id: "cryptoharbor"
+  },
+  {
+    id: "sharder-protocol"
+  },
+  {
+    id: "hydro-protocol"
+  },
+  {
+    id: "rubycoin"
+  },
+  {
+    id: "sport-and-leisure"
+  },
+  {
+    id: "bitcoin-private"
+  },
+  {
+    id: "the-abyss"
+  },
+  {
+    id: "etheroll"
+  },
+  {
+    id: "ugchain"
+  },
+  {
+    id: "bankex"
+  },
+  {
+    id: "sphere"
+  },
+  {
+    id: "dimcoin"
+  },
+  {
+    id: "synereo"
+  },
+  {
+    id: "crowd-machine"
+  },
+  {
+    id: "credit-tag-chain"
+  },
+  {
+    id: "alqo"
+  },
+  {
+    id: "utrum"
+  },
+  {
+    id: "friendz"
+  },
+  {
+    id: "merculet"
+  },
+  {
+    id: "omnitude"
+  },
+  {
+    id: "abo"
+  },
+  {
+    id: "safe-coin-2"
+  },
+  {
+    id: "yggdrash"
+  },
+  {
+    id: "fnkos"
+  },
+  {
+    id: "electrify-asia"
+  },
+  {
+    id: "datum"
+  },
+  {
+    id: "social-media-coin"
+  },
+  {
+    id: "exrnchain"
+  },
+  {
+    id: "fairgame"
+  },
+  {
+    id: "earthcoin"
+  },
+  {
+    id: "presearch"
+  },
+  {
+    id: "curecoin"
+  },
+  {
+    id: "peculium"
+  },
+  {
+    id: "sureremit"
+  },
+  {
+    id: "snetwork"
+  },
+  {
+    id: "bgogo"
+  },
+  {
+    id: "qbao"
+  },
+  {
+    id: "paypex"
+  },
+  {
+    id: "portal"
+  },
+  {
+    id: "bitdice"
+  },
+  {
+    id: "ultiledger"
+  },
+  {
+    id: "spindle"
+  },
+  {
+    id: "project-districts"
+  },
+  {
+    id: "privatix"
+  },
+  {
+    id: "stronghands"
+  },
+  {
+    id: "boxx"
+  },
+  {
+    id: "storiqa"
+  },
+  {
+    id: "transfercoin"
+  },
+  {
+    id: "cannabiscoin"
+  },
+  {
+    id: "linfinity"
+  },
+  {
+    id: "farmatrust"
+  },
+  {
+    id: "winco"
+  },
+  {
+    id: "masari"
+  },
+  {
+    id: "spacechain"
+  },
+  {
+    id: "ubex"
+  },
+  {
+    id: "hi-mutual-society"
+  },
+  {
+    id: "circuits-of-value"
+  },
+  {
+    id: "carlive-chain"
+  },
+  {
+    id: "mysterium"
+  },
+  {
+    id: "ivy"
+  },
+  {
+    id: "cryptaldash"
+  },
+  {
+    id: "vites"
+  },
+  {
+    id: "karma-coin"
+  },
+  {
+    id: "sentinel-chain"
+  },
+  {
+    id: "selfsell"
+  },
+  {
+    id: "chronobank"
+  },
+  {
+    id: "bitsend"
+  },
+  {
+    id: "bitcar"
+  },
+  {
+    id: "effect-ai"
+  },
+  {
+    id: "breezecoin"
+  },
+  {
+    id: "ceek"
+  },
+  {
+    id: "matchpool"
+  },
+  {
+    id: "wetrust"
+  },
+  {
+    id: "vectorspace"
+  },
+  {
+    id: "cargox"
+  },
+  {
+    id: "echolink"
+  },
+  {
+    id: "dnotes"
+  },
+  {
+    id: "hollywoodcoin"
+  },
+  {
+    id: "pundi-x-nem"
+  },
+  {
+    id: "traxia"
+  },
+  {
+    id: "rightmesh"
+  },
+  {
+    id: "cai-token"
+  },
+  {
+    id: "espers"
+  },
+  {
+    id: "stox"
+  },
+  {
+    id: "copytrack"
+  },
+  {
+    id: "lux"
+  },
+  {
+    id: "joyso"
+  },
+  {
+    id: "carboneum"
+  },
+  {
+    id: "cappasity"
+  },
+  {
+    id: "electronicgulden"
+  },
+  {
+    id: "social-lending-token"
+  },
+  {
+    id: "shopzcoin"
+  },
+  {
+    id: "energo"
+  },
+  {
+    id: "insurex"
+  },
+  {
+    id: "scanetchain"
+  },
+  {
+    id: "coinlion"
+  },
+  {
+    id: "aichain"
+  },
+  {
+    id: "bithereum"
+  },
+  {
+    id: "cashbet-coin"
+  },
+  {
+    id: "okcash"
+  },
+  {
+    id: "globalboost"
+  },
+  {
+    id: "likecoin"
   }
 ];
 export default symbolsList;

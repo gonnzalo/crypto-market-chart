@@ -1,6 +1,7 @@
 .circular-progress {
-  height: calc(100vh - 140px);
+  height: calc(100vh - 200px);
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scale(1.5);
 }

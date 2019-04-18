@@ -40,14 +40,13 @@ export default function Chart(props) {
                 color: "white"
               }
             }
-            // disabled: { ... }
           }
         },
 
         selected: 4
       },
       chart: {
-        height: 600,
+        height: window.innerWidth > 1280 ? 700 : 600,
         backgroundColor: "#242F39",
         style: {
           color: "white"
@@ -67,12 +66,6 @@ export default function Chart(props) {
           color: "#444444"
         }
       },
-      // title: {
-      //   text: "market cap",
-      //   style: {
-      //     color: "#FFFFFF"
-      //   }
-      // },
       tooltip: {
         valueDecimals: 0,
         backgroundColor: "#1C242D",
@@ -80,7 +73,8 @@ export default function Chart(props) {
         borderWidth: 1,
         borderRadius: 0,
         style: {
-          color: "#FFFFFF"
+          color: "#FFFFFF",
+          fontSize: "15px"
         }
       },
       subtitle: {
@@ -101,19 +95,15 @@ export default function Chart(props) {
         },
         lineColor: "#2E3740",
         tickColor: "#2E3740"
-        // title: {
-        //   style: {
-        //     color: "#FFFFFF"
-        //   },
-        //   text: "market cap"
-        // }
       },
       yAxis: {
         title: {
           style: {
-            color: "#FFFFFF"
+            color: "#FFFFFF",
+            fontSize: "12px",
+            letterSpacing: "2px"
           },
-          text: "Market Cap"
+          text: window.innerWidth > 768 ? "Market Cap" : ""
         },
         gridLineColor: "#2E3740",
         gridLineWidth: 1,

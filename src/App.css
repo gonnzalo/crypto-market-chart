@@ -1,11 +1,33 @@
 .app-container {
+  padding: 2rem 0;
   height: 100vh;
   background-color: #242f39;
   overflow-x: hidden;
 }
 
+@media (max-width: 480px) {
+  .app-container {
+    padding: 1.5rem 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .app-container {
+    padding: 0rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .app-container {
+    display: block;
+    padding: 2rem 0;
+  }
+}
+
 .app-wrapper {
   width: 90%;
   margin: 0 auto;
-  padding-top: 2rem;
 }

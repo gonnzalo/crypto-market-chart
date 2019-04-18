@@ -11,23 +11,18 @@ export default function CryptoList(props) {
           <div className="btns-container" key={`${crypto}-container`}>
             <button
               type="button"
-              key={crypto}
               value={crypto}
               onClick={toggleCrypto}
-              className={`btn btn-symbol ${
-                data[i].display === true ? "active " : ""
-              }`}
+              className={`btn btn-symbol ${data[i].display === true &&
+                "active "}`}
             >
               {crypto}
             </button>
             <button
-              key={`${crypto}-remove`}
               value={crypto}
               type="button"
               onClick={removeCrypto}
-              className={`btn-remove ${
-                data[i].display === true ? "active-remove " : ""
-              }`}
+              className="btn-remove"
             >
               X
             </button>
