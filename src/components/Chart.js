@@ -47,9 +47,9 @@ export default function Chart(props) {
       },
       chart: {
         height: window.innerWidth > 1280 ? 700 : 600,
-        backgroundColor: "#242F39",
+        backgroundColor: "var(--color-primary-0)",
         style: {
-          color: "white"
+          color: "var(--color-text-0)"
         }
       },
       legend: {
@@ -99,7 +99,7 @@ export default function Chart(props) {
       yAxis: {
         title: {
           style: {
-            color: "#FFFFFF",
+            color: "var(--color-text-0)",
             fontSize: "12px",
             letterSpacing: "2px"
           },

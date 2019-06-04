@@ -19,5 +19,27 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
+  background-color: var(--color-primary-0);
   overflow-x: hidden;
+}
+
+:root {
+  --font: "Montserrat", sans-serif;
+
+  --color-primary-0: #242f39;
+  --color-primary-1: #1a2531;
+
+  --color-secundary-0: #2fb0c7;
+  --color-secundary-1: #1a2129;
+
+  --color-text-0: #ffffff;
+}
+
+[data-theme="light"] {
+  --color-primary-0: #fefefe;
+  --color-primary-1: #e2e2e2;
+
+  --color-secundary-1: #ffffff;
+
+  --color-text-0: #222222;
 }

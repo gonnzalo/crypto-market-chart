@@ -1,7 +1,6 @@
 .app-container {
   padding: 2rem 0;
   height: 100vh;
-  background-color: #242f39;
   overflow-x: hidden;
 }
 
@@ -30,4 +29,14 @@
 .app-wrapper {
   width: 90%;
   margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switch-toggle {
+  height: 40px;
 }

@@ -4,6 +4,8 @@ import Chart from "./components/Chart";
 import CryptoList from "./components/CryptoList";
 import LoadingProgress from "./components/LoadingProgress";
 import AutoComplete from "./components/AutoComplete";
+import useDarkMode from "./UseDarkMode";
+import BtnSwitch from "./components/BtnSwitch";
 import "./App.css";
 
 // Custon Hook
@@ -102,6 +104,7 @@ const useCoinGeckoApi = symbol => {
 };
 
 function App() {
+  const { theme, toggleTheme } = useDarkMode();
   const [query, setQuery] = useState("eos");
   const {
     data,
@@ -129,11 +132,14 @@ function App() {
   return (
     <div className="app-container">
       <div className="app-wrapper">
-        <AutoComplete
-          query={query}
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-        />
+        <header className="header">
+          <AutoComplete
+            query={query}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+          />
+          <BtnSwitch toggleTheme={toggleTheme} theme={theme} />
+        </header>
         {isLoading ? (
           <LoadingProgress className="loading-progress" />
         ) : (
