@@ -36,7 +36,7 @@ body {
 }
 
 [data-theme="light"] {
-  --color-primary-0: #fefefe;
+  --color-primary-0: #f6f6f6;
   --color-primary-1: #e2e2e2;
 
   --color-secundary-1: #ffffff;
