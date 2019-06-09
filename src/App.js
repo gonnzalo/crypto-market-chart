@@ -66,6 +66,9 @@ const useCoinGeckoApi = symbol => {
       }
     };
     fetchData().catch(() => setIsLoading(false));
+    return () => {
+      setUrl("");
+    };
   }, [url]);
 
   const doFetch = myUrl => {
@@ -124,7 +127,6 @@ function App() {
     doFetch(
       `https://api.coingecko.com/api/v3/coins/${query}/market_chart?vs_currency=usd&days=max`
     );
-
     event.target.reset();
     event.preventDefault();
   }
@@ -137,6 +139,7 @@ function App() {
             query={query}
             handleChange={handleChange}
             handleSubmit={handleSubmit}
+            update={updateChart}
           />
           <BtnSwitch toggleTheme={toggleTheme} theme={theme} />
         </header>

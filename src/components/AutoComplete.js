@@ -31,9 +31,14 @@ class AutoComplete extends React.Component {
     };
   }
 
-  onChange = (event, { newValue, method }) => {
+  componentDidUpdate(prevProps, prevState) {
     const { handleChange } = this.props;
-    handleChange(newValue);
+    if (this.state.value !== prevState.value) {
+      handleChange(this.state.value);
+    }
+  }
+
+  onChange = (event, { newValue, method }) => {
     this.setState({
       value: method === "enter" ? "" : newValue
     });
