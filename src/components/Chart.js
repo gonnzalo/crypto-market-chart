@@ -46,7 +46,7 @@ export default function Chart(props) {
         selected: 4
       },
       chart: {
-        height: window.innerWidth > 1280 ? 700 : 600,
+        height: window.innerWidth > 1441 ? 700 : 600,
         backgroundColor: "var(--color-primary-0)",
         style: {
           color: "var(--color-text-0)"

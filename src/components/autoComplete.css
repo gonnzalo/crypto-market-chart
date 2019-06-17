@@ -107,7 +107,7 @@
   border-radius: 0 4px 0px 0;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 340px) {
   .form-container {
     width: 220px;
     margin-right: 0.6rem;
@@ -122,6 +122,24 @@
 
   .btn-clear {
     left: 185px;
+  }
+}
+
+@media (min-width: 340px) and (max-width: 380px) {
+  .form-container {
+    width: 240px;
+    margin-right: 0.6rem;
+  }
+
+  .react-autosuggest__input {
+    width: 240px;
+  }
+  .react-autosuggest__suggestions-container--open {
+    width: 240px;
+  }
+
+  .btn-clear {
+    left: 205px;
   }
 }
 
