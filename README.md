@@ -4,9 +4,11 @@ Crypto Market Chart is a website to compare cryptocurrencies by market cap.
 
 Build with React, Highcharts and react-autosuggest
 
-## Demo
+![ScreenShot](https://raw.github.com/gonnzalo/personal-website/master/src/images/crypto-chart.png)
 
-[https://crypto-market.gonnzalo.now.sh//](https://crypto-market.gonnzalo.now.sh//)
+## Live Demo
+
+[https://crypto-market.gonnzalo.now.sh/](https://crypto-market.gonnzalo.now.sh/)
 
 ## Features
 
