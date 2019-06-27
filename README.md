@@ -16,7 +16,7 @@ Build with React, Highcharts and react-autosuggest
 - auto suggest
 - light/dark mode
 - add/remove the cryptocurrency you like
-- Full responsive
+- Fully responsive
 
 ## Installation
 
